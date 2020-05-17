@@ -33,7 +33,8 @@ class ViewController: UIViewController {
         if hit.count == 0 {
             touchEventsResponder?.touchedNothing()
         }
-        for result in hit {
+        //for result in hit.first
+        if let result = hit.first {
             if let pad = result.node as? PadNode {
                 touchEventsResponder?.touchedPad(pad: pad)
             } else if NavArrowNames.isArrowName(result.node.name) {
@@ -42,6 +43,14 @@ class ViewController: UIViewController {
                 touchEventsResponder?.touchedArrowIcon()
             } else if result.node.name == ElementIconNames.arrowRotate.string {
                 touchEventsResponder?.touchedArrowRotateIcon()
+            } else if result.node.name == ElementIconNames.arrowDeletion.string {
+                touchEventsResponder?.touchedArrowDeleteIcon()
+            } else if result.node.name == ControlIconNames.play.string {
+                touchEventsResponder?.touchedPlayIcon()
+            } else if result.node.name == ControlIconNames.pause.string {
+                touchEventsResponder?.touchedPauseIcon()
+            } else if result.node.name == ControlIconNames.wipe.string {
+                touchEventsResponder?.touchedWipeIcon()
             } else if result.node.name == ElementIconNames.ball.string {
                 touchEventsResponder?.touchedBallIcon()
             }

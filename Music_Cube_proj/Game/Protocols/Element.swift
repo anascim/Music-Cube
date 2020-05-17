@@ -11,4 +11,5 @@ import SceneKit
 protocol Element: SCNNode {
     
     func activate(by ball: Ball)
+    func delete()
 }

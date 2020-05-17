@@ -11,6 +11,9 @@ import SceneKit
 class Ball: SCNNode {
     
     unowned let cube: Cube
+    
+    let synth: Synth
+    
     var lastPad: PadNode
     var nextPad: PadNode
     var lastPosition: SCNVector3
@@ -29,6 +32,7 @@ class Ball: SCNNode {
         self.nextPad = pad
         self.lastPosition = lastPad.position
         self.nextPosition = lastPosition
+        self.synth = Synth()
         super.init()
         self.geometry = ModelsManager.ballGeometry
         self.position = lastPosition
@@ -36,6 +40,7 @@ class Ball: SCNNode {
     }
     
     func update(deltaTime: Float) {
+        if GameManager.isPaused { return }
         if pct > 0.99 {
             reachedNextPosition()
         }

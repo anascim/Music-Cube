@@ -10,8 +10,6 @@ import SceneKit
 import SceneKit.ModelIO
 import ModelIO
 
-let PI = Float.pi
-
 public class GameManager: NSObject, SCNSceneRendererDelegate {
     
     public var scene: SCNScene
@@ -21,9 +19,14 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
     var cameraNode: SCNNode!
     var arrowElementNode: SCNNode!
     var arrowRotateElementNode: SCNNode!
-    
+    var arrowDeletionElementNode: SCNNode!
+    var playIconNode: SCNNode!
+    var pauseIconNode: SCNNode!
+    var wipeIconNode: SCNNode!
     
     var selectedPad: PadNode?
+    
+    static var isPaused = false
     
     // HUD
     var elementsCentralNode: SCNNode!
@@ -126,19 +129,28 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         playbackCentralNode.position = SCNVector3(-0.45, -1.6, -5)
         playbackCentralNode.eulerAngles = SCNVector3(-0.4, 0, 0)
         
-        let playIconNode = ModelsManager.createNode(filename: "play_icon")
+        playIconNode = ModelsManager.createNode(filename: "play_icon")
+        playIconNode.name = ControlIconNames.play.string
         playIconNode.scale = SCNVector3(0.12, 0.12, 0.12)
-        playIconNode.position = SCNVector3(-0.2, 0, 0)
-        playIconNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
+        playIconNode.position = SCNVector3(-0.3, 0, 0)
+        playIconNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemGreen
         
-        let pauseIconNode = ModelsManager.createNode(filename: "pause_icon")
+        pauseIconNode = ModelsManager.createNode(filename: "pause_icon")
+        pauseIconNode.name = ControlIconNames.pause.string
         pauseIconNode.scale = SCNVector3(0.12, 0.12, 0.12)
-        pauseIconNode.position = SCNVector3(0.2, 0, 0)
+        pauseIconNode.position = SCNVector3(0, 0, 0)
         pauseIconNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
         pauseIconNode.geometry?.materials[1].diffuse.contents = UIColor.white
         
+        wipeIconNode = ModelsManager.createNode(filename: "rotating_arrow")
+        wipeIconNode.name = ControlIconNames.wipe.string
+        wipeIconNode.scale = SCNVector3(0.12, 0.12, 0.07)
+        wipeIconNode.position = SCNVector3(0.3, 0, 0)
+        wipeIconNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
+        
         playbackCentralNode.addChildNode(playIconNode)
         playbackCentralNode.addChildNode(pauseIconNode)
+        playbackCentralNode.addChildNode(wipeIconNode)
         cameraNode.addChildNode(playbackCentralNode)
         
         // Elements Icons
@@ -162,6 +174,13 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         arrowRotateElementNode.position = SCNVector3(-0.45, 0, 0)
         arrowRotateElementNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemBlue
         
+        arrowDeletionElementNode = ModelsManager.createNode(filename: "short_arrow")
+        arrowDeletionElementNode.name = ElementIconNames.arrowDeletion.string
+        arrowDeletionElementNode.scale = SCNVector3(0.15, 0.15, 0.15)
+        arrowDeletionElementNode.eulerAngles = SCNVector3(0, 0, -PI/2)
+        arrowDeletionElementNode.position = SCNVector3(-0.8, 0, 0)
+        arrowDeletionElementNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemRed
+        
         let ballElementNode = SCNNode(geometry: ModelsManager.ballGeometry)
         ballElementNode.name = ElementIconNames.ball.string
         ballElementNode.position = SCNVector3(0, 0, 0)
@@ -170,6 +189,7 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         elementsCentralNode.addChildNode(ballElementNode)
         elementsCentralNode.addChildNode(arrowElementNode)
         elementsCentralNode.addChildNode(arrowRotateElementNode)
+        elementsCentralNode.addChildNode(arrowDeletionElementNode)
         cameraNode.addChildNode(elementsCentralNode)
         
         
@@ -198,11 +218,13 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
     func showRegularArrowIcon() {
         arrowElementNode.isHidden = false
         arrowRotateElementNode.isHidden = true
+        arrowDeletionElementNode.isHidden = true
     }
     
     func showRotatingArrowIcon() {
         arrowElementNode.isHidden = true
         arrowRotateElementNode.isHidden = false
+        arrowDeletionElementNode.isHidden = false
     }
     
     var lastTime: TimeInterval = 0

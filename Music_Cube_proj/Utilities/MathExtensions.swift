@@ -6,6 +6,9 @@
 //  Copyright © 2020 Alex Nascimento. All rights reserved.
 //
 
+let TWO_PI = Float.pi * 2
+let PI = Float.pi
+
 extension Float {
     
     static func / (_ lhs: Float, _ rhs: Int) -> Float {

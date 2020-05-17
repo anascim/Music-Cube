@@ -8,7 +8,7 @@
 
 import SceneKit
 
-class ArrowElement: SCNNode, Element {
+class ArrowElement: SCNNode {
     
     unowned var pad: PadNode
     var direction: MCDirection
@@ -76,8 +76,30 @@ class ArrowElement: SCNNode, Element {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
+
+extension ArrowElement: Element {
     
     func activate(by ball: Ball) {
         ball.direction = self.direction
+        switch pad.coord.getDominant().1 {
+        case .up:
+            ball.synth.play(note: .D4, for: 0.2)
+        case .down:
+            ball.synth.play(note: .G4, for: 0.2)
+        case .right:
+            ball.synth.play(note: .C4, for: 0.2)
+        case .left:
+            ball.synth.play(note: .E4, for: 0.2)
+        case .forward:
+            ball.synth.play(note: .A4, for: 0.2)
+        case .back:
+            ball.synth.play(note: .A3, for: 0.2)
+        }
+    }
+    
+    func delete() {
+        self.pad.element = nil
+        self.removeFromParentNode()
     }
 }

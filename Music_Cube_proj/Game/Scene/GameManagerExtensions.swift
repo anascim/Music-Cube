@@ -63,12 +63,37 @@ extension GameManager: TouchEventsResponder {
         }
     }
     
+    func touchedArrowDeleteIcon() {
+        guard let selectedPad = self.selectedPad else {
+            print("WARNING: No pad selected for placing element")
+            hideElementsHud(); return
+        }
+        if let arrowElement = selectedPad.element as? ArrowElement {
+            arrowElement.delete()
+        }
+        showRegularArrowIcon()
+    }
+    
+    func touchedWipeIcon() {
+        for pad in cube.pads.values {
+            if let element = pad.element {
+                element.delete()
+            }
+        }
+    }
+    
     func touchedPlayIcon() {
-        
+        GameManager.isPaused = false
+        self.playIconNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemGreen
+        self.pauseIconNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
+        self.pauseIconNode.geometry?.materials[1].diffuse.contents = UIColor.white
     }
     
     func touchedPauseIcon() {
-        
+        GameManager.isPaused = true
+        self.playIconNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
+        self.pauseIconNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemRed
+        self.pauseIconNode.geometry?.materials[1].diffuse.contents = UIColor.systemRed
     }
     
     func touchedArrows(arrowName: String) {

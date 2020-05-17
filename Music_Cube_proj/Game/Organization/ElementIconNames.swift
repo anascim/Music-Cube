@@ -10,12 +10,14 @@ enum ElementIconNames: CaseIterable {
     
     case arrow
     case arrowRotate
+    case arrowDeletion
     case ball
     
     var string: String {
         switch self {
         case .arrow: return "arrow_element_icon"
         case .arrowRotate: return "arrow_rotate_icon"
+        case .arrowDeletion: return "arrow_deletion_icon"
         case .ball: return "ball_element_icon"
         }
     }

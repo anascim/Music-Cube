@@ -15,7 +15,7 @@ class PadNode: SCNNode {
     var color: UIColor
     var selectionColor: UIColor
     
-    private(set) var element: Element?
+    var element: Element?
     
     init(coord: MCCoordinate, color: UIColor, selectionColor: UIColor) {
         self.coord = coord

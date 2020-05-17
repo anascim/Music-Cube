@@ -13,7 +13,9 @@ protocol TouchEventsResponder: AnyObject {
     func touchedArrowIcon()
     func touchedBallIcon()
     func touchedArrowRotateIcon()
+    func touchedArrowDeleteIcon()
     func touchedPlayIcon()
     func touchedPauseIcon()
+    func touchedWipeIcon()
     func touchedNothing()
 }
