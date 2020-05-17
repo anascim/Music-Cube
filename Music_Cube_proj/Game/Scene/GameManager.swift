@@ -83,7 +83,7 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         // ::   HUD   ::
         // =============
         
-        // Arrows
+        // Navigation Arrows
         let arrowsCentralNode = SCNNode()
         arrowsCentralNode.position = SCNVector3(0.45, -1.6, -5)
         arrowsCentralNode.eulerAngles = SCNVector3(-0.6, 0, 0)
@@ -121,7 +121,7 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         arrowsCentralNode.addChildNode(downArrowNode)
         cameraNode.addChildNode(arrowsCentralNode)
         
-        // Playback options
+        // Playback Options
         let playbackCentralNode = SCNNode()
         playbackCentralNode.position = SCNVector3(-0.45, -1.6, -5)
         playbackCentralNode.eulerAngles = SCNVector3(-0.4, 0, 0)
@@ -141,7 +141,7 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         playbackCentralNode.addChildNode(pauseIconNode)
         cameraNode.addChildNode(playbackCentralNode)
         
-        // Elements
+        // Elements Icons
         elementsCentralNode = SCNNode()
         elementsCentralNode.isHidden = true
         elementsCentralNode.position = SCNVector3(0, 1.6, -5)
@@ -154,11 +154,11 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         arrowElementNode.position = SCNVector3(-0.45, 0, 0)
         arrowElementNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemBlue
         
-        arrowRotateElementNode = ModelsManager.createNode(filename: "short_arrow")
+        arrowRotateElementNode = ModelsManager.createNode(filename: "rotating_arrow")
         arrowRotateElementNode.name = ElementIconNames.arrowRotate.string
         arrowRotateElementNode.isHidden = true
-        arrowRotateElementNode.scale = SCNVector3(0.15, 0.15, 0.15)
-        arrowRotateElementNode.eulerAngles = SCNVector3(0, 0, -PI)
+        arrowRotateElementNode.scale = SCNVector3(0.15, 0.15, 0.07)
+        arrowRotateElementNode.eulerAngles = SCNVector3(0, 0, 0)
         arrowRotateElementNode.position = SCNVector3(-0.45, 0, 0)
         arrowRotateElementNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemBlue
         

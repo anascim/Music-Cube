@@ -18,6 +18,7 @@
 		8C18D9332470EA6600168EE9 /* ElementIconNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C18D9322470EA6600168EE9 /* ElementIconNames.swift */; };
 		8C18D9362471041C00168EE9 /* arrow_side_fb.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8C18D9342471041C00168EE9 /* arrow_side_fb.obj */; };
 		8C18D9372471041C00168EE9 /* arrow_side_rl.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8C18D9352471041C00168EE9 /* arrow_side_rl.obj */; };
+		8C1A2B0E24717EDA0055C310 /* rotating_arrow.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8C1A2B0D24717EDA0055C310 /* rotating_arrow.obj */; };
 		8C37894A246D06D300BBF2CC /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378949246D06D300BBF2CC /* GameManager.swift */; };
 		8C378955246E345500BBF2CC /* MCCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378954246E345500BBF2CC /* MCCoordinate.swift */; };
 		8C378957246E347500BBF2CC /* MCOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378956246E347500BBF2CC /* MCOrientation.swift */; };
@@ -52,10 +53,11 @@
 		8C18D9282470AE2300168EE9 /* PadSelectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadSelectionDelegate.swift; sourceTree = "<group>"; };
 		8C18D92A2470AEA500168EE9 /* ArrowElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowElement.swift; sourceTree = "<group>"; };
 		8C18D92C2470DF9400168EE9 /* SCNCoordinateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNCoordinateExtensions.swift; sourceTree = "<group>"; };
-		8C18D9302470E61200168EE9 /* arrow_side.obj */ = {isa = PBXFileReference; lastKnownFileType = file; name = arrow_side.obj; path = blender_files/arrow_side.obj; sourceTree = SOURCE_ROOT; };
+		8C18D9302470E61200168EE9 /* arrow_side.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = arrow_side.obj; path = blender_files/arrow_side.obj; sourceTree = SOURCE_ROOT; };
 		8C18D9322470EA6600168EE9 /* ElementIconNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementIconNames.swift; sourceTree = "<group>"; };
-		8C18D9342471041C00168EE9 /* arrow_side_fb.obj */ = {isa = PBXFileReference; lastKnownFileType = file; name = arrow_side_fb.obj; path = blender_files/arrow_side_fb.obj; sourceTree = SOURCE_ROOT; };
-		8C18D9352471041C00168EE9 /* arrow_side_rl.obj */ = {isa = PBXFileReference; lastKnownFileType = file; name = arrow_side_rl.obj; path = blender_files/arrow_side_rl.obj; sourceTree = SOURCE_ROOT; };
+		8C18D9342471041C00168EE9 /* arrow_side_fb.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = arrow_side_fb.obj; path = blender_files/arrow_side_fb.obj; sourceTree = SOURCE_ROOT; };
+		8C18D9352471041C00168EE9 /* arrow_side_rl.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = arrow_side_rl.obj; path = blender_files/arrow_side_rl.obj; sourceTree = SOURCE_ROOT; };
+		8C1A2B0D24717EDA0055C310 /* rotating_arrow.obj */ = {isa = PBXFileReference; lastKnownFileType = file; name = rotating_arrow.obj; path = blender_files/rotating_arrow.obj; sourceTree = SOURCE_ROOT; };
 		8C378949246D06D300BBF2CC /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		8C378954246E345500BBF2CC /* MCCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCoordinate.swift; sourceTree = "<group>"; };
 		8C378956246E347500BBF2CC /* MCOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCOrientation.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				8C9F6A312470A9A8007D6164 /* pause_icon.obj */,
 				8C18D9342471041C00168EE9 /* arrow_side_fb.obj */,
 				8C18D9352471041C00168EE9 /* arrow_side_rl.obj */,
+				8C1A2B0D24717EDA0055C310 /* rotating_arrow.obj */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C9F6A2E2470A384007D6164 /* play_icon.obj in Resources */,
+				8C1A2B0E24717EDA0055C310 /* rotating_arrow.obj in Resources */,
 				8C18D9312470E61200168EE9 /* arrow_side.obj in Resources */,
 				8C6CA0DB246CE7A300AEF2E1 /* LaunchScreen.storyboard in Resources */,
 				8CC6D94D24703D3A0053B530 /* box.obj in Resources */,
