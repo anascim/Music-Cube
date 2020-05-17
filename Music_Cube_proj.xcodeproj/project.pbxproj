@@ -46,7 +46,7 @@
 		8C9F6A342470AA7F007D6164 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F6A332470AA7F007D6164 /* Element.swift */; };
 		8C9F6A362470AC35007D6164 /* GameManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F6A352470AC35007D6164 /* GameManagerExtensions.swift */; };
 		8CC6D94D24703D3A0053B530 /* box.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8CC6D94C24703D390053B530 /* box.obj */; };
-		8CCE46642471EAE500209F2A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCE46632471EAE500209F2A /* Colors.swift */; };
+		8CCE46662471FB8800209F2A /* x.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8CCE46652471FB8800209F2A /* x.obj */; };
 		8CDEDADC2471A7DD005D8B25 /* SynthWaveForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDEDADB2471A7DD005D8B25 /* SynthWaveForms.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,7 +92,7 @@
 		8C9F6A332470AA7F007D6164 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		8C9F6A352470AC35007D6164 /* GameManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerExtensions.swift; sourceTree = "<group>"; };
 		8CC6D94C24703D390053B530 /* box.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.obj; sourceTree = "<group>"; };
-		8CCE46632471EAE500209F2A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8CCE46652471FB8800209F2A /* x.obj */ = {isa = PBXFileReference; lastKnownFileType = file; name = x.obj; path = blender_files/x.obj; sourceTree = SOURCE_ROOT; };
 		8CDEDADB2471A7DD005D8B25 /* SynthWaveForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthWaveForms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,7 +115,6 @@
 				8C0C8B0E2470746600BEDD41 /* NavArrowNames.swift */,
 				8C06F0B62471DD14002C6556 /* ControlIconNames.swift */,
 				8C18D9322470EA6600168EE9 /* ElementIconNames.swift */,
-				8CCE46632471EAE500209F2A /* Colors.swift */,
 			);
 			path = Organization;
 			sourceTree = "<group>";
@@ -248,6 +247,7 @@
 				8C18D9342471041C00168EE9 /* arrow_side_fb.obj */,
 				8C18D9352471041C00168EE9 /* arrow_side_rl.obj */,
 				8C1A2B0D24717EDA0055C310 /* rotating_arrow.obj */,
+				8CCE46652471FB8800209F2A /* x.obj */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -313,6 +313,7 @@
 				8C9F6A2E2470A384007D6164 /* play_icon.obj in Resources */,
 				8C1A2B0E24717EDA0055C310 /* rotating_arrow.obj in Resources */,
 				8C18D9312470E61200168EE9 /* arrow_side.obj in Resources */,
+				8CCE46662471FB8800209F2A /* x.obj in Resources */,
 				8C6CA0DB246CE7A300AEF2E1 /* LaunchScreen.storyboard in Resources */,
 				8CC6D94D24703D3A0053B530 /* box.obj in Resources */,
 				8C0C8B0D24706CDB00BEDD41 /* short_arrow.obj in Resources */,
@@ -352,7 +353,6 @@
 				8C8D70AB246EF45D00128AEE /* CoordinateExtensions.swift in Sources */,
 				8C792A402470797100D96A45 /* TouchEventsResponder.swift in Sources */,
 				8C6CA0E3246CE7BD00AEF2E1 /* Pad.swift in Sources */,
-				8CCE46642471EAE500209F2A /* Colors.swift in Sources */,
 				8C18D9332470EA6600168EE9 /* ElementIconNames.swift in Sources */,
 				8C6CA0CF246CE7A200AEF2E1 /* AppDelegate.swift in Sources */,
 				8C0C8B092470591600BEDD41 /* ModelsManager.swift in Sources */,

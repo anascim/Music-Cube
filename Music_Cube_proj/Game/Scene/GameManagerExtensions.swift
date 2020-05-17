@@ -48,7 +48,13 @@ extension GameManager: TouchEventsResponder {
             print("WARNING: No pad selected for placing element")
             hideElementsHud(); return
         }
-        let ball = Ball(cube: cube, direction: .zi, pad: selectedPad)
+        let face = selectedPad.coord.getDominant().1
+        let ball: Ball
+        if face == .forward || face == .back {
+            ball = Ball(cube: cube, direction: .xi, pad: selectedPad)
+        } else {
+            ball = Ball(cube: cube, direction: .zi, pad: selectedPad)            
+        }
         balls.append(ball)
         cube.addChildNode(ball)
     }
@@ -79,6 +85,10 @@ extension GameManager: TouchEventsResponder {
             if let element = pad.element {
                 element.delete()
             }
+        }
+        for ball in balls {
+            balls.removeAll(where: { $0 == ball })
+            ball.removeFromParentNode()
         }
     }
     

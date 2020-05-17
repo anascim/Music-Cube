@@ -45,6 +45,16 @@ struct MCCoordinate {
         fatalError("No dominant axis on pad coordinate")
     }
     
+    func isCentral() -> Bool {
+        var count2s = 0
+        for i in 0...2 {
+            if self[i] == 2 {
+                count2s += 1
+            }
+        }
+        return count2s == 2
+    }
+    
     func nextCoord(on direction: MCDirection) -> MCCoordinate {
         var nextCoord = self
         if checkOverstep(on: direction) {

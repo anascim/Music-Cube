@@ -171,15 +171,15 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         arrowRotateElementNode.isHidden = true
         arrowRotateElementNode.scale = SCNVector3(0.15, 0.15, 0.07)
         arrowRotateElementNode.eulerAngles = SCNVector3(0, 0, 0)
-        arrowRotateElementNode.position = SCNVector3(-0.45, 0, 0)
+        arrowRotateElementNode.position = SCNVector3(-0.4, 0, 0)
         arrowRotateElementNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemBlue
         
-        arrowDeletionElementNode = ModelsManager.createNode(filename: "short_arrow")
+        arrowDeletionElementNode = ModelsManager.createNode(filename: "x")
         arrowDeletionElementNode.name = ElementIconNames.arrowDeletion.string
         arrowDeletionElementNode.scale = SCNVector3(0.15, 0.15, 0.15)
-        arrowDeletionElementNode.eulerAngles = SCNVector3(0, 0, -PI/2)
-        arrowDeletionElementNode.position = SCNVector3(-0.8, 0, 0)
+        arrowDeletionElementNode.position = SCNVector3(-0.7, 0, 0)
         arrowDeletionElementNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemRed
+        arrowDeletionElementNode.geometry?.materials[1].diffuse.contents = UIColor.systemRed
         
         let ballElementNode = SCNNode(geometry: ModelsManager.ballGeometry)
         ballElementNode.name = ElementIconNames.ball.string

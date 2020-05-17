@@ -36,7 +36,7 @@ class Synth {
     var time: Float = 0
     
     lazy var oscillator = AVAudioSourceNode { (_, _, frameCount, audioBufferList) -> OSStatus in
-            
+
         let ablPointer = UnsafeMutableAudioBufferListPointer(audioBufferList)
         
         // for each frame in a packet
@@ -55,6 +55,7 @@ class Synth {
     }
     
     init() {
+        self.engine.mainMixerNode.outputVolume = 0.0
         self.outputFormat = self.engine.outputNode.outputFormat(forBus: 0)
         self.inputFormat = AVAudioFormat(commonFormat: outputFormat.commonFormat,
                                     sampleRate: outputFormat.sampleRate,
@@ -66,7 +67,6 @@ class Synth {
         self.engine.prepare()
         
         setupEngine()
-        startEngine()
     }
 
     public func play(note: Note, for duration: TimeInterval) {
@@ -89,6 +89,8 @@ class Synth {
             self.engine.connect(oscillator, to: engine.mainMixerNode, format: inputFormat)
             self.engine.connect(engine.mainMixerNode, to: engine.outputNode, format: outputFormat)
             self.engine.mainMixerNode.outputVolume = 0.0
+
+            startEngine()
         }
     }
     

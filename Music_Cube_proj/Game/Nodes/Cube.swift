@@ -59,7 +59,7 @@ class Cube: SCNNode {
     
     func createPads() {
         for coord in padCoords {
-            let pad = PadNode(coord: coord, color: .systemOrange, selectionColor: .systemYellow)
+            let pad = PadNode(coord: coord, color: .systemOrange, selectionColor: .orange)
             pads[coord] = pad
             self.addChildNode(pad)
         }

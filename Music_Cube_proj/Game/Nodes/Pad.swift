@@ -12,7 +12,11 @@ import SceneKit
 class PadNode: SCNNode {
     
     let coord: MCCoordinate
-    var color: UIColor
+    var color: UIColor {
+        didSet {
+            self.geometry?.firstMaterial?.diffuse.contents = color
+        }
+    }
     var selectionColor: UIColor
     
     var element: Element?
@@ -54,21 +58,27 @@ class PadNode: SCNNode {
         case .up:
             self.scale = SCNVector3(0.2, 0.05, 0.2)
             self.position = SCNVector3(CGFloat(coord.x)/4 - 0.5, (CGFloat(coord.y)-0.5)/4 - 0.5, CGFloat(coord.z)/4 - 0.5)
+            if self.coord.isCentral() { self.color = UIColor.systemGreen }
         case .down:
             self.scale = SCNVector3(0.2, 0.05, 0.2)
             self.position = SCNVector3(CGFloat(coord.x)/4 - 0.5, (CGFloat(coord.y)+0.5)/4 - 0.5, CGFloat(coord.z)/4 - 0.5)
+            if self.coord.isCentral() { self.color = UIColor.systemPink }
         case .right:
             self.scale = SCNVector3(0.05, 0.2, 0.2)
             self.position = SCNVector3((CGFloat(coord.x)-0.5)/4 - 0.5, CGFloat(coord.y)/4 - 0.5, CGFloat(coord.z)/4 - 0.5)
+            if self.coord.isCentral() { self.color = UIColor.systemRed }
         case .left:
             self.scale = SCNVector3(0.05, 0.2, 0.2)
             self.position = SCNVector3((CGFloat(coord.x)+0.5)/4 - 0.5, CGFloat(coord.y)/4 - 0.5, CGFloat(coord.z)/4 - 0.5)
+            if self.coord.isCentral() { self.color = UIColor.systemTeal }
         case .forward:
             self.scale = SCNVector3(0.2, 0.2, 0.05)
             self.position = SCNVector3(CGFloat(coord.x)/4 - 0.5, CGFloat(coord.y)/4 - 0.5, (CGFloat(coord.z)-0.5)/4 - 0.5)
+            if self.coord.isCentral() { self.color = UIColor.systemBlue }
         case .back:
             self.scale = SCNVector3(0.2, 0.2, 0.05)
             self.position = SCNVector3(CGFloat(coord.x)/4 - 0.5, CGFloat(coord.y)/4 - 0.5, (CGFloat(coord.z)+0.5)/4 - 0.5)
+            if self.coord.isCentral() { self.color = UIColor.systemYellow }
         }
     }
 }
