@@ -77,7 +77,6 @@ class Synth {
 //        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (_) in
 //            self.volume = self.envelope.apply(volume: self.volume, time:  self.time)
 //        }
-        print(duration)
         Timer.scheduledTimer(withTimeInterval: duration, repeats: false) { (timer) in
             self.volume = 0
         }

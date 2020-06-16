@@ -11,6 +11,10 @@ import SceneKit
 extension GameManager: TouchEventsResponder {
     
     func touchedPad(pad: PadNode) {
+        if selectedPad == pad {
+            (pad.element as? ArrowElement)?.rotateDirection()
+            return
+        }
         selectedPad?.unhighlight()
         selectedPad = pad
         selectedPad!.highlight()
@@ -111,12 +115,12 @@ extension GameManager: TouchEventsResponder {
         case NavArrowNames.left.string:
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.2
-            cube.eulerAngles = cube.eulerAngles + SCNVector3(0, -PI/2, 0)
+            cube.eulerAngles = cube.eulerAngles + SCNVector3(0, PI/2, 0)
             SCNTransaction.commit()
         case NavArrowNames.right.string:
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.2
-            cube.eulerAngles = cube.eulerAngles + SCNVector3(0, PI/2, 0)
+            cube.eulerAngles = cube.eulerAngles + SCNVector3(0, -PI/2, 0)
             SCNTransaction.commit()
         case NavArrowNames.up.string:
             SCNTransaction.begin()

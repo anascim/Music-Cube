@@ -22,7 +22,7 @@
 		8C1A2B0E24717EDA0055C310 /* rotating_arrow.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8C1A2B0D24717EDA0055C310 /* rotating_arrow.obj */; };
 		8C1A2B112471828A0055C310 /* Synth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A2B102471828A0055C310 /* Synth.swift */; };
 		8C1A2B13247183120055C310 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A2B12247183120055C310 /* Notes.swift */; };
-		8C37894A246D06D300BBF2CC /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378949246D06D300BBF2CC /* GameManager.swift */; };
+		8C37894A246D06D300BBF2CC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378949246D06D300BBF2CC /* GameScene.swift */; };
 		8C378955246E345500BBF2CC /* MCCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378954246E345500BBF2CC /* MCCoordinate.swift */; };
 		8C378957246E347500BBF2CC /* MCOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378956246E347500BBF2CC /* MCOrientation.swift */; };
 		8C378959246E3CDE00BBF2CC /* MathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378958246E3CDE00BBF2CC /* MathExtensions.swift */; };
@@ -66,7 +66,7 @@
 		8C1A2B0D24717EDA0055C310 /* rotating_arrow.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = rotating_arrow.obj; path = blender_files/rotating_arrow.obj; sourceTree = SOURCE_ROOT; };
 		8C1A2B102471828A0055C310 /* Synth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synth.swift; sourceTree = "<group>"; };
 		8C1A2B12247183120055C310 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
-		8C378949246D06D300BBF2CC /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		8C378949246D06D300BBF2CC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8C378954246E345500BBF2CC /* MCCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCoordinate.swift; sourceTree = "<group>"; };
 		8C378956246E347500BBF2CC /* MCOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCOrientation.swift; sourceTree = "<group>"; };
 		8C378958246E3CDE00BBF2CC /* MathExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathExtensions.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		8C9F6A332470AA7F007D6164 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
 		8C9F6A352470AC35007D6164 /* GameManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerExtensions.swift; sourceTree = "<group>"; };
 		8CC6D94C24703D390053B530 /* box.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.obj; sourceTree = "<group>"; };
-		8CCE46652471FB8800209F2A /* x.obj */ = {isa = PBXFileReference; lastKnownFileType = file; name = x.obj; path = blender_files/x.obj; sourceTree = SOURCE_ROOT; };
+		8CCE46652471FB8800209F2A /* x.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = x.obj; path = blender_files/x.obj; sourceTree = SOURCE_ROOT; };
 		8CDEDADB2471A7DD005D8B25 /* SynthWaveForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthWaveForms.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -228,7 +228,7 @@
 		8CC3F3B52470ACA900479F83 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8C378949246D06D300BBF2CC /* GameManager.swift */,
+				8C378949246D06D300BBF2CC /* GameScene.swift */,
 				8C9F6A352470AC35007D6164 /* GameManagerExtensions.swift */,
 			);
 			path = Scene;
@@ -338,7 +338,7 @@
 				8C378955246E345500BBF2CC /* MCCoordinate.swift in Sources */,
 				8C37895B246E3FDD00BBF2CC /* SceneKitExtensions.swift in Sources */,
 				8C37895E246E4A7100BBF2CC /* Debug.swift in Sources */,
-				8C37894A246D06D300BBF2CC /* GameManager.swift in Sources */,
+				8C37894A246D06D300BBF2CC /* GameScene.swift in Sources */,
 				8C378959246E3CDE00BBF2CC /* MathExtensions.swift in Sources */,
 				8C18D92D2470DF9400168EE9 /* SCNCoordinateExtensions.swift in Sources */,
 				8CDEDADC2471A7DD005D8B25 /* SynthWaveForms.swift in Sources */,

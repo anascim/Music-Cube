@@ -86,17 +86,17 @@ extension ArrowElement: Element {
         ball.direction = self.direction
         switch pad.coord.getDominant().1 {
         case .up:
-            ball.synth.play(note: .D4, for: 0.1)
-        case .down:
-            ball.synth.play(note: .G4, for: 0.1)
-        case .right:
-            ball.synth.play(note: .C4, for: 0.1)
-        case .left:
-            ball.synth.play(note: .E4, for: 0.1)
-        case .forward:
-            ball.synth.play(note: .A4, for: 0.1)
-        case .back:
             ball.synth.play(note: .A3, for: 0.1)
+        case .down:
+            ball.synth.play(note: .E4, for: 0.1)
+        case .right:
+            ball.synth.play(note: .D4, for: 0.1)
+        case .left:
+            ball.synth.play(note: .A4, for: 0.1)
+        case .forward:
+            ball.synth.play(note: .C4, for: 0.1)
+        case .back:
+            ball.synth.play(note: .G4, for: 0.1)
         }
     }
     
