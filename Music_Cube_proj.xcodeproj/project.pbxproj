@@ -22,7 +22,7 @@
 		8C1A2B0E24717EDA0055C310 /* rotating_arrow.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8C1A2B0D24717EDA0055C310 /* rotating_arrow.obj */; };
 		8C1A2B112471828A0055C310 /* Synth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A2B102471828A0055C310 /* Synth.swift */; };
 		8C1A2B13247183120055C310 /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1A2B12247183120055C310 /* Notes.swift */; };
-		8C37894A246D06D300BBF2CC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378949246D06D300BBF2CC /* GameScene.swift */; };
+		8C37894A246D06D300BBF2CC /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378949246D06D300BBF2CC /* GameManager.swift */; };
 		8C378955246E345500BBF2CC /* MCCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378954246E345500BBF2CC /* MCCoordinate.swift */; };
 		8C378957246E347500BBF2CC /* MCOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378956246E347500BBF2CC /* MCOrientation.swift */; };
 		8C378959246E3CDE00BBF2CC /* MathExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C378958246E3CDE00BBF2CC /* MathExtensions.swift */; };
@@ -44,7 +44,7 @@
 		8C9F6A2E2470A384007D6164 /* play_icon.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8C9F6A2D2470A384007D6164 /* play_icon.obj */; };
 		8C9F6A322470A9A8007D6164 /* pause_icon.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8C9F6A312470A9A8007D6164 /* pause_icon.obj */; };
 		8C9F6A342470AA7F007D6164 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F6A332470AA7F007D6164 /* Element.swift */; };
-		8C9F6A362470AC35007D6164 /* GameManagerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F6A352470AC35007D6164 /* GameManagerExtensions.swift */; };
+		8C9F6A362470AC35007D6164 /* GameManager+TouchEventsResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F6A352470AC35007D6164 /* GameManager+TouchEventsResponder.swift */; };
 		8CC6D94D24703D3A0053B530 /* box.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8CC6D94C24703D390053B530 /* box.obj */; };
 		8CCE46662471FB8800209F2A /* x.obj in Resources */ = {isa = PBXBuildFile; fileRef = 8CCE46652471FB8800209F2A /* x.obj */; };
 		8CDEDADC2471A7DD005D8B25 /* SynthWaveForms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CDEDADB2471A7DD005D8B25 /* SynthWaveForms.swift */; };
@@ -66,7 +66,7 @@
 		8C1A2B0D24717EDA0055C310 /* rotating_arrow.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = rotating_arrow.obj; path = blender_files/rotating_arrow.obj; sourceTree = SOURCE_ROOT; };
 		8C1A2B102471828A0055C310 /* Synth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synth.swift; sourceTree = "<group>"; };
 		8C1A2B12247183120055C310 /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
-		8C378949246D06D300BBF2CC /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		8C378949246D06D300BBF2CC /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		8C378954246E345500BBF2CC /* MCCoordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCCoordinate.swift; sourceTree = "<group>"; };
 		8C378956246E347500BBF2CC /* MCOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCOrientation.swift; sourceTree = "<group>"; };
 		8C378958246E3CDE00BBF2CC /* MathExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathExtensions.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		8C9F6A2D2470A384007D6164 /* play_icon.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = play_icon.obj; sourceTree = "<group>"; };
 		8C9F6A312470A9A8007D6164 /* pause_icon.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = pause_icon.obj; path = Music_Cube_proj/Game/Assets/pause_icon.obj; sourceTree = SOURCE_ROOT; };
 		8C9F6A332470AA7F007D6164 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
-		8C9F6A352470AC35007D6164 /* GameManagerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerExtensions.swift; sourceTree = "<group>"; };
+		8C9F6A352470AC35007D6164 /* GameManager+TouchEventsResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameManager+TouchEventsResponder.swift"; sourceTree = "<group>"; };
 		8CC6D94C24703D390053B530 /* box.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = box.obj; sourceTree = "<group>"; };
 		8CCE46652471FB8800209F2A /* x.obj */ = {isa = PBXFileReference; lastKnownFileType = text; name = x.obj; path = blender_files/x.obj; sourceTree = SOURCE_ROOT; };
 		8CDEDADB2471A7DD005D8B25 /* SynthWaveForms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthWaveForms.swift; sourceTree = "<group>"; };
@@ -228,8 +228,8 @@
 		8CC3F3B52470ACA900479F83 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8C378949246D06D300BBF2CC /* GameScene.swift */,
-				8C9F6A352470AC35007D6164 /* GameManagerExtensions.swift */,
+				8C378949246D06D300BBF2CC /* GameManager.swift */,
+				8C9F6A352470AC35007D6164 /* GameManager+TouchEventsResponder.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -338,14 +338,14 @@
 				8C378955246E345500BBF2CC /* MCCoordinate.swift in Sources */,
 				8C37895B246E3FDD00BBF2CC /* SceneKitExtensions.swift in Sources */,
 				8C37895E246E4A7100BBF2CC /* Debug.swift in Sources */,
-				8C37894A246D06D300BBF2CC /* GameScene.swift in Sources */,
+				8C37894A246D06D300BBF2CC /* GameManager.swift in Sources */,
 				8C378959246E3CDE00BBF2CC /* MathExtensions.swift in Sources */,
 				8C18D92D2470DF9400168EE9 /* SCNCoordinateExtensions.swift in Sources */,
 				8CDEDADC2471A7DD005D8B25 /* SynthWaveForms.swift in Sources */,
 				8C6CA0D3246CE7A200AEF2E1 /* ViewController.swift in Sources */,
 				8C06F0B72471DD14002C6556 /* ControlIconNames.swift in Sources */,
 				8C1A2B112471828A0055C310 /* Synth.swift in Sources */,
-				8C9F6A362470AC35007D6164 /* GameManagerExtensions.swift in Sources */,
+				8C9F6A362470AC35007D6164 /* GameManager+TouchEventsResponder.swift in Sources */,
 				8C18D9292470AE2300168EE9 /* PadSelectionDelegate.swift in Sources */,
 				8C378957246E347500BBF2CC /* MCOrientation.swift in Sources */,
 				8C8D70AD246EF7C400128AEE /* MCDirection.swift in Sources */,

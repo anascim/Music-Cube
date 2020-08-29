@@ -10,7 +10,7 @@ import SceneKit
 import SceneKit.ModelIO
 import ModelIO
 
-public class GameScene: SCNScene, SCNSceneRendererDelegate {
+public class GameManager: NSObject, SCNSceneRendererDelegate {
     
     public var scene: SCNScene
     
@@ -27,6 +27,7 @@ public class GameScene: SCNScene, SCNSceneRendererDelegate {
     var selectedPad: PadNode?
     
     static var isPaused = false
+    var isTopView = true
     
     // HUD
     var elementsCentralNode: SCNNode!
@@ -36,10 +37,6 @@ public class GameScene: SCNScene, SCNSceneRendererDelegate {
         self.scene = SCNScene()
         super.init()
         setupScene()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     func setupScene() {

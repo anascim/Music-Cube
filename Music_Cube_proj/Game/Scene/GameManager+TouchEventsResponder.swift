@@ -115,24 +115,29 @@ extension GameManager: TouchEventsResponder {
         case NavArrowNames.left.string:
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.2
-            cube.eulerAngles = cube.eulerAngles + SCNVector3(0, PI/2, 0)
+            let q = simd_quatf(angle: .pi/2, axis: normalize([0,1,0]))
+            cube.simdLocalRotate(by: q)
             SCNTransaction.commit()
         case NavArrowNames.right.string:
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.2
-            cube.eulerAngles = cube.eulerAngles + SCNVector3(0, -PI/2, 0)
+            let q = simd_quatf(angle: -.pi/2, axis: normalize([0,1,0]))
+            cube.simdLocalRotate(by: q)
             SCNTransaction.commit()
         case NavArrowNames.up.string:
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.4
-            cube.rotate(by: SCNQuaternion(0.707106781186548,0,-0.707106781186548, 0), aroundTarget: SCNVector3(0,0,0))
-            SCNTransaction.commit()
+            verticalRotate()
         case NavArrowNames.down.string:
-            SCNTransaction.begin()
-            SCNTransaction.animationDuration = 0.4
-            cube.rotate(by: SCNQuaternion(0.707106781186548,0,-0.707106781186548, 0), aroundTarget: SCNVector3(0,0,0))
-            SCNTransaction.commit()
+            verticalRotate()
         default: fatalError("Wrong string passed on arrow name")
         }
+    }
+    
+    func verticalRotate() {
+        SCNTransaction.begin()
+        SCNTransaction.animationDuration = 0.4
+        let q = simd_quatf(angle: isTopView ? -.pi/2 : .pi/2, axis: normalize([1,0,-1]))
+        isTopView.toggle()
+        cube.simdRotate(by: q, aroundTarget: [0,0,0])
+        SCNTransaction.commit()
     }
 }
