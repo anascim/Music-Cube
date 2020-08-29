@@ -94,29 +94,29 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         
         let leftArrowNode = ModelsManager.createNode(filename: "short_arrow")
         leftArrowNode.name = NavArrowNames.left.string
-        leftArrowNode.scale = SCNVector3(0.15, 0.15, 0.15)
+        leftArrowNode.scale = SCNVector3(0.25, 0.25, 0.25)
         leftArrowNode.eulerAngles = SCNVector3(0, 0, PI/2)
-        leftArrowNode.position = SCNVector3(-0.15, 0, 0)
+        leftArrowNode.position = SCNVector3(-0.2, 0, 0)
         leftArrowNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemYellow
 
         let rightArrowNode = ModelsManager.createNode(filename: "short_arrow")
         rightArrowNode.name = NavArrowNames.right.string
-        rightArrowNode.scale = SCNVector3(0.15, 0.15, 0.15)
+        rightArrowNode.scale = SCNVector3(0.25, 0.25, 0.25)
         rightArrowNode.eulerAngles = SCNVector3(0, 0, -PI/2)
-        rightArrowNode.position = SCNVector3(0.15, 0, 0)
+        rightArrowNode.position = SCNVector3(0.2, 0, 0)
         rightArrowNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemYellow
         
         let upArrowNode = ModelsManager.createNode(filename: "short_arrow")
         upArrowNode.name = NavArrowNames.up.string
-        upArrowNode.scale = SCNVector3(0.15, 0.15, 0.15)
-        upArrowNode.position = SCNVector3(0, 0.05, 0)
+        upArrowNode.scale = SCNVector3(0.25, 0.25, 0.25)
+        upArrowNode.position = SCNVector3(0, 0.1, 0)
         upArrowNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemYellow
         
         let downArrowNode = ModelsManager.createNode(filename: "short_arrow")
         downArrowNode.name = NavArrowNames.down.string
-        downArrowNode.scale = SCNVector3(0.15, 0.15, 0.15)
+        downArrowNode.scale = SCNVector3(0.25, 0.25, 0.25)
         downArrowNode.eulerAngles = SCNVector3(0, 0, PI)
-        downArrowNode.position = SCNVector3(0, -0.05, 0)
+        downArrowNode.position = SCNVector3(0, -0.1, 0)
         downArrowNode.geometry?.firstMaterial?.diffuse.contents = UIColor.systemYellow
         
         arrowsCentralNode.addChildNode(leftArrowNode)

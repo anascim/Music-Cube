@@ -115,13 +115,13 @@ extension GameManager: TouchEventsResponder {
         case NavArrowNames.left.string:
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.2
-            let q = simd_quatf(angle: .pi/2, axis: normalize([0,1,0]))
+            let q = simd_quatf(angle: .pi/2, axis: [0,1,0])
             cube.simdLocalRotate(by: q)
             SCNTransaction.commit()
         case NavArrowNames.right.string:
             SCNTransaction.begin()
             SCNTransaction.animationDuration = 0.2
-            let q = simd_quatf(angle: -.pi/2, axis: normalize([0,1,0]))
+            let q = simd_quatf(angle: -.pi/2, axis: [0,1,0])
             cube.simdLocalRotate(by: q)
             SCNTransaction.commit()
         case NavArrowNames.up.string:
