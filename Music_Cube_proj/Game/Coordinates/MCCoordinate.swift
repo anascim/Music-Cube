@@ -74,7 +74,6 @@ struct MCCoordinate {
                 count += 1
             }
         }
-//        print(count)
         return count != 1
     }
     

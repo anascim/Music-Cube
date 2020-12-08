@@ -135,7 +135,7 @@ extension GameManager: TouchEventsResponder {
     func verticalRotate() {
         SCNTransaction.begin()
         SCNTransaction.animationDuration = 0.4
-        let q = simd_quatf(angle: isTopView ? -.pi/2 : .pi/2, axis: normalize([1,0,-1]))
+        let q = simd_quatf(angle: isTopView ? -1.23095942 : 1.23095942, axis: normalize([1,0,-1]))
         isTopView.toggle()
         cube.simdRotate(by: q, aroundTarget: [0,0,0])
         SCNTransaction.commit()

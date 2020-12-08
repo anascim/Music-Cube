@@ -41,7 +41,6 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
     
     func setupScene() {
         
-        
         // ==================
         // ::   Lighting   ::
         // ==================
@@ -192,7 +191,6 @@ public class GameManager: NSObject, SCNSceneRendererDelegate {
         elementsCentralNode.addChildNode(arrowRotateElementNode)
         elementsCentralNode.addChildNode(arrowDeletionElementNode)
         cameraNode.addChildNode(elementsCentralNode)
-        
         
         
         // =================

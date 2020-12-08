@@ -46,5 +46,4 @@ extension Cube {
             print(coord)
         }
     }
-    
 }
