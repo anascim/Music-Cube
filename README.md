@@ -2,6 +2,8 @@
 
 ### A cube that is the stage for making looping and crazy music.
 
+Download it on App Store: https://apps.apple.com/us/app/super-music-cube/id1543975416
+
 ![Music Cube App preview](music_cube_preview.png "App Preview")
 
 INSTRUCTIONS:
