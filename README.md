@@ -1,6 +1,8 @@
 # Super Music Cube
 
-###A cube that is the stage for making looping and crazy music.
+### A cube that is the stage for making looping and crazy music.
+
+![Music Cube App preview](music_cube_preview.png "App Preview")
 
 INSTRUCTIONS:
 * Click on one of the tiles and click on the ball or the arrow above to place them in the cube.
